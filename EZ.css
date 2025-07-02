@@ -1,0 +1,64 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the header text */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* Bio section: photo left, text right */
+.bio-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 8px;
+}
+
+.bio-text {
+    flex: 1;
+    min-width: 250px;
+    max-width: 700px;
+}
+
+/* Embedded video styling */
+.showreel {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
