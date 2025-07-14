@@ -297,6 +297,46 @@
                 transform: translateY(0);
             }
         }
+        /* Add some padding to body content to avoid overlap */
+body {
+  padding-left: 200px; /* width + gap of left nav */
+  padding-right: 100px; /* width + gap of right nav */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* On smaller screens: reduce padding */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Option 1: Hide left and right nav on small screens */
+  nav, .left-links {
+    position: static;  /* remove fixed */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #111; /* optional for visibility */
+  }
+
+  /* Or, if you want to keep fixed nav but smaller size and repositioned */
+  /*
+  nav {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #111;
+  }
+  .left-links {
+    display: none;  // hide on small screens if preferred
+  }
+  */
+}
+
     </style>
 </head>
 
