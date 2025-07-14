@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Keywords" content="audio; sound design; Manchester; Manchester-based; women in audio; composer; composition"
+    <meta property="og:title" content="Emily Zurowski | Sound Designer & Composer">
+    <meta property="og:description"
+        content="Original music, sound design, and immersive audio experiences by Emily Zurowski.">
+    <meta property="og:image" content="https://www.emilyzurowski.co.uk/Images/Photo1.webp">
+    <meta property="og:url" content="https://www.emilyzurowski.co.uk">
+    <meta property="og:type" content="website">
+    <meta name="description" <meta
+        content="Emily Zurowski is a sound designer and composer based in Manchester, creating original sound design and music for film, games, and interactive media.">
+    <title>Emily Zurowski</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Roboto+Mono:ital,wght@0,300&display=swap"
+        rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emily Zurowski",
+      "jobTitle": "Sound Designer and Composer",
+      "url": "www.emilyzurowski.co.uk",
+      "sameAs": [
+        "https://open.spotify.com/3EVg1QPPhfyIAI9n6yLDZU",
+        "https://www.instagram.com/emilyzurowski",
+        "https://vimeo.com/user208834989"
+      ]
+    }
+  </script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover,
+        a:focus {
+            color: #fff;
+            outline: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            display: block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .left-links {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 180px;
+        }
+
+        .left-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .left-links a:hover,
+        .left-links a:focus {
+            color: #fff;
+            transform: scale(1.05);
+            outline: none;
+        }
+
+        .left-links p {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 300;
+            font-size: 0.75rem;
+            margin: 4px 0 0 0;
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin: 0px;
+            margin-bottom: -1px;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            padding: 80px 20px 40px;
+            background-color: #111;
+            /* fallback background */
+            overflow: hidden;
+            /* prevent overflow causing the white line */
+            margin-bottom: -1px;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: justify;
+            overflow: hidden;
+        }
+
+        .hero-content img {
+            width: 400px;
+            height: auto;
+            border-radius: 0px;
+            border: 4px solid #000c78;
+            /* 👈 adds white border */
+        }
+
+        .hero-content h1 {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: -1px
+        }
+
+        .hero-content p {
+            margin: 0 0 1rem 0;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: -1px
+        }
+
+        /* Headings */
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            margin-top: 0px;
+            font-size: 1.8rem;
+        }
+
+        /* Video container */
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            margin-bottom: -1px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: -1px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #000;
+            color: #fff;
+            padding-bottom: 60px;
+            margin: 0px;
+        }
+
+        #contact .section-text {
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        #contact h2 {
+            margin-top: 0;
+        }
+
+        #contact a {
+            color: #00aced;
+            font-weight: 600;
+        }
+
+        #contact a:hover,
+        #contact a:focus {
+            color: #0091c2;
+        }
+
+        #contact a.download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #fff;
+            color: #000;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact a.download-btn:hover,
+        #contact a.download-btn:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Right nav -->
+    <nav aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#Sound-Design-Work">Sound Design</a>
+        <a href="#Video-Games">Video Games</a>
+        <a href="#Composition-Work">Composition</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Left links -->
+    <div class="left-links" aria-label="Spotify links">
+        <a href="https://open.spotify.com/artist/3EVg1QPPhfyIAI9n6yLDZU" target="_blank" rel="noopener noreferrer">
+            MODEMA
+            <p>Click here to listen to Emily's releases as an <br>independent artist</p>
+        </a>
+        <a href="https://open.spotify.com/track/2AjB1CCKlumQX9uJG48mDS" target="_blank" rel="noopener noreferrer">
+            TOP TRACK
+            <p>Over 9.4 million streams (collaboration under <I>Mola Mola</I>)</p>
+        </a>
+    </div>
+
+    <!-- Home section -->
+    <section id="home" class="hero" tabindex="-1">
+        <div class="overlay"></div>
+        <div class="hero-content fade-in">
+            <img src="Images/Photo1.webp" loading="lazy"
+                alt="A black and white photo of Emily Zurowski standing on stage with a range of synthesisers and a microphone" />
+            <h1>Emily Zurowski</h1>
+            <p>Sound Designer | Composer</p>
+            <p>
+                Emily is a Scottish composer, audio producer and performer based in Manchester. She has worked as a
+                session
+                musician (keys, synth, and vocals) with artists such as The Orielles (2019-2023) and WH Lung, touring
+                internationally
+                and performing at festivals such as
+                <a href="https://www.youtube.com/watch?v=41b52MqgrY8" target="_blank" rel="noopener noreferrer">SXSW</a>
+                and
+                <a href="https://www.youtube.com/watch?v=Qv2wfoXc2TU&list=RDQv2wfoXc2TU&start_radio=1" target="_blank"
+                    rel="noopener noreferrer">Green Man Festival</a>. She has released music as an independent artist,
+                receiving praise from
+                <a href="https://www.clashmusic.com/news/modemas-running-back-offers-glorious-celestial-pop/"
+                    target="_blank" rel="noopener noreferrer">Clash Magazine</a>
+                and BBC Radio 6. She has co-created immersive audio-visual installations as part of a Manchester-based
+                creative
+                collective, and composed original soundtracks for two documentaries by award-winning filmmaker Maire
+                Tracy. Between
+                2021 and 2025, Emily hosted the radio show
+                <a href="https://www.reformradio.co.uk/residents/hypnagogia/" target="_blank"
+                    rel="noopener noreferrer">Hypnagogia</a>
+                on Reform Radio. Her current interests lie in composing original music and producing sound design for
+                visual and
+                interactive media, co-creating work through community-focused projects, and using the arts as a vehicle
+                for social
+                change.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sound Design Showreel -->
+    <section id="Sound-Design-Work" tabindex="-1">
+        <h2 class="fade-in">Sound Design Showreel<br> COMING SOON</h2>
+        <div class="video-container fade-in">
+            <iframe loading="lazy"
+                title="Sound Design Showreel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Video Games Showreel -->
+    <section id="Video-Games" tabindex="-1">
+        <h2 class="fade-in">Video Game Showreel<br> COMING SOON</h2>
+        <div class="video-container fade-in">
+            <iframe loading="lazy"
+                title="Video Game Showreel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Composition Showreel -->
+    <section id="Composition-Work" tabindex="-1">
+        <h2 class="fade-in">Composition Showreel<br> COMING SOON</h2>
+        <div class="video-container fade-in">
+            <iframe loading="lazy""
+                title="Composition Showreel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" tabindex="-1">
+        <div class="section-text fade-in">
+            <h2>Contact</h2>
+            <p>
+                Want to collaborate? Email me at
+                <a href="mailto:emilyzurowski@gmail.com">emilyzurowski@gmail.com</a>
+            </p>
+            <p>or WhatsApp me at +44 7801291802</p>
+            <a href="Emily Zurowski CV May 2025 (1).pdf" download class="download-btn">Download CV</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>&copy; 2025 Emily Zurowski. All Rights Reserved.</footer>
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.3 };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>
