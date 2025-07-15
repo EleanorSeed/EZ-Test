@@ -384,15 +384,14 @@
     border-radius: 10px;
     gap: 15px;
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-}
+    height: auto;
+    width: max-content; /* ensures it only wraps the links */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+    }
 
-.nav-links.open {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
+    .nav-links.open {
+        display: flex;
+    }
 }
     </style>
 </head>
@@ -400,7 +399,6 @@
 <body>
 
     <!-- Right nav -->
-    <nav class="nav" aria-label="Primary navigation">
     <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
     <div class="nav-links">
         <a href="#home">Home</a>
