@@ -181,12 +181,11 @@ section {
     gap: 20px;
     text-align: justify;
     overflow: hidden;
-    overflow-wrap: break-word;
 }
 
 .hero-content img {
-    width: 100%;          /* updated */
-    max-width: 400px;     /* updated */
+    width: 40vw;          /* updated */
+    max-width: 50%;     /* updated */
     height: auto;
     border-radius: 0;
     border: 4px solid #000c78;
@@ -210,15 +209,10 @@ section {
     font-weight: 300;
     font-size: 1rem;
 }
-@media (max-width: 768px) {
-  .hero-content {
-    max-width: 95vw;   /* almost full width */
-    padding: 15px 20px; /* some horizontal padding so text doesn’t touch screen edges */
-    margin: 0 auto;    /* center it */
-  }
 
   .hero-content img {
     max-width: 100%;   /* make sure images scale down */
+    width:40vw;
     height: auto;
   }
 }
