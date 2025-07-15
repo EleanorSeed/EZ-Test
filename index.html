@@ -370,24 +370,29 @@
         top: 20px;
         right: 20px;
         z-index: 1001;
+        height: auto
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        padding: 15px;
-        border-radius: 10px;
-        gap: 15px;
-        z-index: 1000;
-    }
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
 
-    .nav-links.open {
-        display: flex;
-    }
+.nav-links.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
 }
     </style>
 </head>
