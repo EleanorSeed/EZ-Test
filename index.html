@@ -90,42 +90,6 @@
             color: #fff;
         }
 
-       .music-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 40px auto;
-    max-width: 400px;
-    top: 50%;
-    left: 50%;
-    z-index: 1000
-}
-
-.music-links a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-}
-
-.music-links a:hover,
-.music-links a:focus {
-    color: #fff;
-    transform: scale(1.05);
-    outline: none;
-}
-
-.music-links p {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
-    font-size: 0.9rem;
-    color: #ccc;
-    margin: 4px 0 0;
-}
 
         section {
             min-height: 100vh;
@@ -141,10 +105,10 @@
             min-height: 100vh;
             padding: 80px 20px 40px;
             background-color: #111;
-            overflow: auto;
+            overflow: hidden;
             box-sizing: border-box;
             position: relative;
-            bottom: -1px
+            bottom: 0px
         }
 
         .hero .overlay {
@@ -313,24 +277,7 @@
                 background: rgba(0, 0, 0, 0.3);
                 padding: 10px 15px;
                 border-radius: 8px;
-            }
-
-            .left-links {
-                position: auto;
-                max-width: 100%;
-                text-align: center;
-                top: 50%;
-                Left: 50%;
-                flex-direction: row;
-                gap: 15px;
-                padding: 10px 0;
-                overflow-x: auto;
-            }
-
-            .left-links a {
-                font-size: 0.9rem;
-                gap: 4px;
-            }
+            }    
         }
 
         /* DESKTOP LAYOUT PADDING */
@@ -481,23 +428,14 @@
                 interactive media, co-creating work through community-focused projects, and using the arts as a
                 vehicle
                 for social
-                change.
+                change. She also releases music under the monica <a href="https://open.spotify.com/artist/3EVg1QPPhfyIAI9n6yLDZU" target="_blank"
+                    rel="noopener noreferrer">MODEMA</a>, and, in 2018, released a <a href="https://open.spotify.com/track/2AjB1CCKlumQX9uJG48mDS" target="_blank"
+                    rel="noopener noreferrer">collaborative track with Joaquin Cornejo</a> that has received over 9 million streams to date.
             </p>
         </div>
         
     </section>
 
-        <!-- Left links -->
-    <div class="left-links" aria-label="Spotify links">
-        <a href="https://open.spotify.com/artist/3EVg1QPPhfyIAI9n6yLDZU" target="_blank" rel="noopener noreferrer">
-            <b>MODEMA</b> [solo project]
-            <p>Click here to listen.</p>
-        </a>
-        <a href="https://open.spotify.com/track/2AjB1CCKlumQX9uJG48mDS" target="_blank" rel="noopener noreferrer">
-            <b>TOP TRACK</b> [over 9m streams]
-            <p>Click here to listen</p>
-        </a>
-    </div>
 
     <!-- Sound Design Showreel -->
     <section id="Sound-Design-Work" tabindex="-1">
