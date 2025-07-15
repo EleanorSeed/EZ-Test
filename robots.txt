@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emilyzurowski.co.uk/sitemap.xml
