@@ -12,7 +12,8 @@
     <meta property="og:image" content="https://www.emilyzurowski.co.uk/Images/Photo1.webp">
     <meta property="og:url" content="https://www.emilyzurowski.co.uk">
     <meta property="og:type" content="website">
-    <meta name="description" content="Emily Zurowski is a sound designer and composer based in Manchester, creating original sound design and music for film, games, and interactive media.">
+    <meta name="description"
+        content="Emily Zurowski is a sound designer and composer based in Manchester, creating original sound design and music for film, games, and interactive media.">
     <title>Emily Zurowski</title>
 
     <link
@@ -89,45 +90,42 @@
             color: #fff;
         }
 
-        .left-links {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            max-width: 180px;
-        }
+       .music-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    z-index: 1000
+}
 
-        .left-links a {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 900;
-            font-size: 1.1rem;
-            margin-left: 5vw;
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+.music-links a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
 
-        .left-links a:hover,
-        .left-links a:focus {
-            color: #fff;
-            transform: scale(1.05);
-            outline: none;
-        }
+.music-links a:hover,
+.music-links a:focus {
+    color: #fff;
+    transform: scale(1.05);
+    outline: none;
+}
 
-        .left-links p {
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 300;
-            font-size: 0.75rem;
-            margin: 4px 0 0 0;
-            color: #ccc;
-            line-height: 1.4;
-        }
+.music-links p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 4px 0 0;
+}
 
         section {
             min-height: 100vh;
@@ -146,6 +144,7 @@
             overflow: auto;
             box-sizing: border-box;
             position: relative;
+            bottom: -1px
         }
 
         .hero .overlay {
@@ -153,7 +152,7 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
+            bottom: -1px;
             background: rgba(0, 0, 0, 0.9);
             z-index: 0;
             pointer-events: none;
@@ -297,6 +296,7 @@
                 width: 95vw;
                 padding: 10px;
                 text-align: left;
+                bottom: -1px
             }
 
             .hero-content img {
@@ -316,8 +316,11 @@
             }
 
             .left-links {
-                position: static;
+                position: auto;
                 max-width: 100%;
+                text-align: center;
+                top: 50%;
+                Left: 50%;
                 flex-direction: row;
                 gap: 15px;
                 padding: 10px 0;
@@ -348,7 +351,8 @@
         }
 
         .hamburger {
-            display: none;;
+            display: none;
+            ;
             background: transparent;
             border: none;
             font-size: 2rem;
@@ -376,7 +380,7 @@
                 width: auto;
                 height: auto;
                 position: fixed;
-                top: 80px !important;
+                top: 20px !important;
                 right: 20px;
                 z-index: 1000;
 
@@ -423,23 +427,22 @@
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-links a');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active'); // Optional styling
+        });
+
+        // Collapse menu when a nav link is clicked (on mobile)
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
         });
     </script>
 
-    <!-- Left links -->
-    <div class="left-links" aria-label="Spotify links">
-        <a href="https://open.spotify.com/artist/3EVg1QPPhfyIAI9n6yLDZU" target="_blank" rel="noopener noreferrer">
-            MODEMA
-            <p>Click here to listen to Emily's releases as an <br>independent artist</p>
-        </a>
-        <a href="https://open.spotify.com/track/2AjB1CCKlumQX9uJG48mDS" target="_blank" rel="noopener noreferrer">
-            TOP TRACK
-            <p>Over 9.4 million streams (collaboration under <I>Mola Mola</I>)</p>
-        </a>
-    </div>
 
     <!-- Home section -->
     <section id="home" class="hero" tabindex="-1">
@@ -481,7 +484,20 @@
                 change.
             </p>
         </div>
+        
     </section>
+
+        <!-- Left links -->
+    <div class="left-links" aria-label="Spotify links">
+        <a href="https://open.spotify.com/artist/3EVg1QPPhfyIAI9n6yLDZU" target="_blank" rel="noopener noreferrer">
+            <b>MODEMA</b> [solo project]
+            <p>Click here to listen.</p>
+        </a>
+        <a href="https://open.spotify.com/track/2AjB1CCKlumQX9uJG48mDS" target="_blank" rel="noopener noreferrer">
+            <b>TOP TRACK</b> [over 9m streams]
+            <p>Click here to listen</p>
+        </a>
+    </div>
 
     <!-- Sound Design Showreel -->
     <section id="Sound-Design-Work" tabindex="-1">
