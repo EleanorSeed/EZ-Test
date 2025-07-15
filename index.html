@@ -66,30 +66,42 @@
             outline: none;
         }
 
-        nav {
+        /* Always show hamburger button */
+        .hamburger {
+            display: block !important;
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        nav a {
-            font-weight: 600;
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1rem;
-            display: block;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        nav a:hover,
-        nav a:focus {
-            transform: scale(1.1);
+            z-index: 1001;
+            background: none;
+            border: none;
+            font-size: 2rem;
             color: #fff;
+            cursor: pointer;
         }
 
+        /* Hide nav links by default (all screen sizes) */
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background:#000;
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            gap: 15px;
+            z-index: 1000;
+            height: auto;
+            width: max-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease;
+        }
+
+        /* Show nav links when open */
+        .nav-links.open {
+            display: flex;
+        }
 
         section {
             min-height: 100vh;
@@ -137,7 +149,7 @@
             position: relative;
             z-index: 1;
             max-width: 100%;
-            width: 50vw;
+            width: 70vw;
             padding: 20px;
             margin: 0 auto;
             box-sizing: border-box;
@@ -177,10 +189,10 @@
         }
 
         .video-container {
-            width: 40vw;
+            width: 55vw;
             max-width: 100%;
             aspect-ratio: 16 / 9;
-            margin-bottom: -1px;
+            margin-bottom: 0px;
         }
 
         iframe {
@@ -188,6 +200,7 @@
             height: 100%;
             border: none;
             border-radius: 8px;
+            bottom: -1px
         }
 
         #contact {
@@ -311,13 +324,6 @@
 
 
 
-        /* Show regular nav on desktop */
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
         /* Mobile */
         @media (max-width: 768px) {
             .hamburger {
@@ -389,6 +395,25 @@
                 hamburger.classList.remove('active');
             });
         });
+        const burger = document.getElementById('burger');
+        const navMenu = document.getElementById('navMenu');
+        const backdrop = document.getElementById('backdrop');
+
+        burger.onclick = function () {
+            navMenu.classList.toggle('open');
+            backdrop.classList.toggle('show');
+        };
+
+        backdrop.onclick = function () {
+            navMenu.classList.remove('open');
+            backdrop.classList.remove('show');
+        };
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
     </script>
 
     <!-- Home section -->
@@ -442,8 +467,9 @@
     <section id="Sound-Design-Work" tabindex="-1">
         <h2 class="fade-in">Sound Design/Composition Showreel<br></h2>
         <div class="video-container fade-in">
-            <iframe loading="lazy" title="Sound Design/Composition Showreel" src="https://player.vimeo.com/video/1091562964?h=8ac3dc801d" allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen></iframe>
+            <iframe loading="lazy" title="Sound Design/Composition Showreel"
+                src="https://player.vimeo.com/video/1091562964?h=8ac3dc801d"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
