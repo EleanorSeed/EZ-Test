@@ -1,0 +1,18 @@
+name: Example Bash Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Bash commands
+        run: |
+          echo "Hello, bash is running!"
+          ls -la
