@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords"
+        content="sound designer, audio, software, hardware, music, instruments, sound design, Manchester, Manchester-based, women, female, composer, composition, video game, film, tv, documentary" />
+    <meta property="og:title" content="Emily Zurowski | Sound Designer & Composer" />
+    <meta property="og:description"
+        content="Original music, sound design, and immersive audio design by Emily Zurowski." />
+    <meta property="og:image" content="https://www.emilyzurowski.co.uk/Images/Photo1.webp" />
+    <meta property="og:url" content="https://www.emilyzurowski.co.uk" />
+    <meta property="og:type" content="website" />
+    <meta name="description" content="Emily Zurowski is a Scottish sound designer and composer based in Manchester." />
+    <title>Emily Zurowski | Sound Designer & Composer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Roboto+Mono:ital,wght@0,300&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./favicon (1).ico">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emily Zurowski",
+      "jobTitle": "Sound Designer and Composer",
+      "url": "https://www.emilyzurowski.co.uk",
+      "sameAs": [
+        "https://open.spotify.com/3EVg1QPPhfyIAI9n6yLDZU",
+        "https://www.instagram.com/emilyzurowski",
+        "https://vimeo.com/user208834989"
+      ]
+    }
+  </script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+            /* Remove the line below */
+            /* overflow: hidden; */
+        }
+
+        a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover,
+        a:focus {
+            color: #fff;
+            outline: none;
+        }
+
+        nav.nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .hamburger {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            gap: 15px;
+            z-index: 999;
+            width: max-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+            background: #000;
+        }
+
+        .hero {
+            position: relative;
+            background-color: #111;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 65vw;
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: justify;
+        }
+
+        .hero-content h1 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0;
+        }
+
+        .hero-content img {
+            max-width: 40vw;
+            border: 4px solid #000c78;
+            display: block;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .hero-content p {
+            font-weight: 300;
+            font-size: 1rem;
+            margin: 0 0 1rem;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0;
+            width: 65vw;
+        
+        }
+
+        .video-container {
+            width: 55vw;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            bottom:-1px
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #contact {
+            padding-bottom: 60px;
+        }
+
+        #contact .section-text {
+            max-width: 100%;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+
+        #contact a {
+            color: #0091c2;
+            font-weight: 600;
+        }
+
+        #contact a:hover {
+            color: #0091c2;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #ffffff;
+            color: #0091c2;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                max-width: 95vw;
+                padding: 10px;
+                text-align: left;
+            }
+
+            .hero-content img {
+                width: 90vw;
+            }
+
+            .video-container {
+                width: 95vw;
+            }
+        }
+
+        @media (min-width: 769px) {
+            section {
+                padding-left: 200px;
+                padding-right: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" aria-label="Primary navigation">
+        <button class="hamburger" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="tuition" class="hero" tabindex="-1">
+        <div class="overlay"></div>
+        <div class="hero-content fade-in">
+            <img src="Images/Emilyphoto2.jpg" loading="lazy"
+                alt="A black and white photo of Emily Zurowski on stage - the photo has special effects applied and is slightly blurred" />
+            <h1>Sound Design, Composition & Recording Tuition</h1>
+            <p>
+                Emily is available as a tutor in the following areas,<br> from beginner to degree level:<br><br>
+                - Ableton and Logic Pro<br>
+                - Live recording<br>
+                - Composition<br>
+                - Max MSP/Pure Data<br><br>
+                Get in touch to discuss what you need!<br><br>Pricing:<br>£30 per hour<br>£120 for 5 hour block<br>£20 per hour student/low income<br><br>Available over teams/zoom/skype or in-person in Manchester
+           </p>
+
+
+    <section id="contact" tabindex="-1">
+        <div class="section-text fade-in">
+            <h2>Contact</h2>
+            <p>Want to collaborate?</p>
+            <p>Email me at <a href="mailto:emilyzurowski@gmail.com">emilyzurowski@gmail.com</a></p>
+            <p><a href="https://wa.me/447801291802">Whatsapp</a> me</p>
+            <p>Connect on <a href="https://www.linkedin.com/in/emily-zurowski-224b62302?originalSubdomain=uk">LinkedIn</a></p>
+            <a href="Emily Zurowski CV May 2025 (1).pdf" download class="download-btn">Download CV</a>
+        </div>
+    </section>
+
+    <footer>&copy; 2025 Emily Zurowski. All Rights Reserved.</footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+</body>
+<!-- Trigger rebuild -->
+
+</html>
