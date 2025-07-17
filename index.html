@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Roboto+Mono:ital,wght@0,300&display=swap"
         rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./favicon (1).ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <script type="application/ld+json">
     {
@@ -41,7 +41,10 @@
             box-sizing: border-box;
         }
 
-        html,
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             height: auto;
             overflow-x: hidden;
@@ -111,8 +114,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            text-align: justify;
             background: #000;
+        }
+
+        .inner-container {
+            max-width: 65vw;
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: justify;
         }
 
         .hero {
@@ -178,14 +192,14 @@
             text-align: center;
             margin: 0;
             width: 65vw;
-        
+
         }
 
         .video-container {
             width: 55vw;
             max-width: 100%;
             aspect-ratio: 16 / 9;
-            bottom:-1px
+            bottom: -1px
         }
 
         iframe {
@@ -317,25 +331,29 @@
                 projects and using the arts as a vehicle for social change.
             </p>
 
-            <p>Take a look at some examples of her <a href="#Sound-Design-Work">work</a> below and find her <a href="#contact">contact details</a> and a full <a
-                    href="#contact">CV</a> at the bottom
+            <p>Take a look at some examples of her <a href="#Sound-Design-Work">work</a> below and find her <a
+                    href="#contact">contact details</a> and a full <a href="#contact">CV</a> at the bottom
                 of the page.</p><br><br>
-            <h2 id="current-projects" "hero-content fade-in">Current Projects</h2>
+            <h2 id="current-projects" class="hero-content fade-in">Current Projects</h2>
             <p>Secret Lake Stories [podcast/soundscape]: <a
-                    href="https://levenshulmeoldlibrary.org.uk/secret-lake-stories" />Read more
-                here</a> <br><br>
+                    href="https://levenshulmeoldlibrary.org.uk/secret-lake-stories">Read more
+                    here</a> <br><br>
                 Becoming Air [live performance] @ <a
                     href="https://www.nightgardenfestival.com/programme#h.piyqx4sfkwha">Nightgarden Festival</a><br><br>
-                Making Contact [contact mic workshops] <br><a href=https://www.pink-mcr.com />Pink MCR</a> 10 August<br>
+                Making Contact [contact mic workshops] <br><a href=https://www.pink-mcr.com>Pink MCR</a> 10 August<br>
                 <a href="https://www.xmtr.fm/festival">XMTR festival</a> TBC
             </p>
         </div>
     </section>
 
     <section id="Sound-Design-Work" tabindex="-1">
-        <h3 class="fade-in">Sound Design/Composition Showreel</h3>
-        <p> Manchester-based since 2018, Emily has worked on a range of media, including<br> community-focused documentaries and video-game sound
-            re-design. She works from<br> her home studio in Manchester, using field recordings, audio programming, a <br>range of software/hardware, and acoustic instruments.</p>
+        <div class="inner-container fade-in">
+            <h3 class="fade-in">Sound Design/Composition Showreel</h3>
+            <p> Manchester-based since 2018, Emily has worked on a range of media, including community-focused
+                documentaries and video-game sound
+                re-design. She works from her home studio, using field recordings, audio programming, a range of
+                software/hardware, and acoustic instruments.</p>
+        </div>
         <div class="video-container fade-in">
             <div style="position:relative; padding-top:56.25%;">
                 <iframe loading="lazy"
@@ -353,7 +371,8 @@
             <p>Want to collaborate?</p>
             <p>Email me at <a href="mailto:emilyzurowski@gmail.com">emilyzurowski@gmail.com</a></p>
             <p><a href="https://wa.me/447801291802">Whatsapp</a> me</p>
-            <p>Connect on <a href="https://www.linkedin.com/in/emily-zurowski-224b62302?originalSubdomain=uk">LinkedIn</a></p>
+            <p>Connect on <a
+                    href="https://www.linkedin.com/in/emily-zurowski-224b62302?originalSubdomain=uk">LinkedIn</a></p>
             <a href="Emily Zurowski CV May 2025 (1).pdf" download class="download-btn">Download CV</a>
         </div>
     </section>
