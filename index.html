@@ -41,7 +41,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             scroll-behavior: smooth;
             height: auto;
             overflow-x: hidden;
@@ -113,6 +114,8 @@
             align-items: center;
             text-align: justify;
             background: #000;
+            bottom: -1px;
+            top: -1px;
         }
 
         .inner-container {
@@ -125,11 +128,12 @@
             align-items: center;
             gap: 20px;
             text-align: center;
+            background: #000;
         }
 
         .hero {
             position: relative;
-            background-color: #111;
+            background-color: #000;
         }
 
         .hero .overlay {
@@ -154,6 +158,7 @@
             align-items: center;
             gap: 20px;
             text-align: justify;
+            background: #000;
         }
 
         .hero-content h1 {
@@ -197,7 +202,10 @@
             width: 55vw;
             max-width: 100%;
             aspect-ratio: 16 / 9;
-            bottom: -1px
+            bottom: -1px;
+            background: #000;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         iframe {
@@ -205,16 +213,20 @@
             height: 100%;
             border: none;
             border-radius: 8px;
+            background: #000;
         }
 
         #contact {
-            padding-bottom: 60px;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            background: #000;
         }
 
         #contact .section-text {
             max-width: 100%;
             margin: 0 auto 20px;
             text-align: center;
+            background: #000;
         }
 
         #contact a {
