@@ -114,8 +114,13 @@
             align-items: center;
             text-align: justify;
             background: #000;
-            bottom: -1px;
-            top: -1px;
+            overflow: hidden;
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;
+        }
+
+        a:focus:not(:focus-visible) {
+            outline: none;
         }
 
         .inner-container {
@@ -141,7 +146,6 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: -1px;
             background: rgba(0, 0, 0, 0.9);
             z-index: 0;
             pointer-events: none;
@@ -170,10 +174,11 @@
 
         .hero-content img {
             max-width: 40vw;
-            border: 4px solid #000c78;
             display: block;
             margin: 0 auto;
             height: auto;
+            border: none;
+            padding: 4px;
         }
 
         .hero-content p {
@@ -202,24 +207,30 @@
             width: 55vw;
             max-width: 100%;
             aspect-ratio: 16 / 9;
-            bottom: -1px;
             background: #000;
             margin-bottom: 0;
             padding-bottom: 0;
+            display: block;
+            outline: none;
+            backface-visibility: hidden;
+            transform: translateZ(0);
         }
 
         iframe {
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 8px;
             background: #000;
+            display: block;
+            outline: none;
+            backface-visibility: hidden;
+            transform: translateZ(0);
         }
 
         #contact {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
             background: #000;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         #contact .section-text {
@@ -266,6 +277,10 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards;
+        }
+
+        section:focus {
+            outline: none;
         }
 
         @keyframes fadeInUp {
@@ -360,7 +375,9 @@
                     here</a> <br><br>
                 Becoming Air [live performance] @ <a
                     href="https://www.nightgardenfestival.com/programme#h.piyqx4sfkwha">Nightgarden Festival</a><br><br>
-                Making Contact [contact mic workshops] <br>Pink MCR 10 August 2-4pm<a href=https://www.eventbrite.co.uk/e/making-contact-tickets-1500061848369?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl> TICKETS</a><br>
+                Making Contact [contact mic workshops] <br>Pink MCR 10 August 2-4pm<a
+                    href=https://www.eventbrite.co.uk/e/making-contact-tickets-1500061848369?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl>
+                    TICKETS</a><br>
                 <a href="https://www.xmtr.fm/festival">XMTR festival</a> TBC
             </p>
         </div>
