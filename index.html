@@ -35,298 +35,7 @@
     }
   </script>
 
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            scroll-behavior: smooth;
-            height: auto;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Roboto Mono', monospace;
-            background-color: #111;
-            color: #fff;
-            line-height: 1.6;
-            /* Remove the line below */
-            /* overflow: hidden; */
-        }
-
-        a {
-            color: #b4b3b3;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover,
-        a:focus {
-            color: #fff;
-            outline: none;
-        }
-
-        nav.nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .hamburger {
-            display: block;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            top: 70px;
-            right: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            gap: 15px;
-            z-index: 999;
-            width: max-content;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-links.open {
-            display: flex;
-        }
-
-        section {
-            min-height: 100vh;
-            padding: 80px 20px 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: justify;
-            background: #000;
-            overflow: hidden;
-            border-bottom: 1px solid #000;
-            border-top: 1px solid #000;
-        }
-
-        a:focus:not(:focus-visible) {
-            outline: none;
-        }
-
-        .inner-container {
-            width: 65vw;
-            max-width: 65;
-            padding: 20px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-            background: #000;
-        }
-
-        .hero {
-            position: relative;
-            background-color: #000;
-        }
-
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 65vw;
-            padding: 20px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: justify;
-            background: #000;
-        }
-
-        .hero-content h1 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-        }
-
-        .hero-content img {
-            max-width: 40vw;
-            display: block;
-            margin: 0 auto;
-            height: auto;
-            border: none;
-            padding: 4px;
-        }
-
-        .hero-content p {
-            font-weight: 300;
-            font-size: 1rem;
-            margin: 0 0 1rem;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-        }
-
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-            width: 65vw;
-
-        }
-
-        .video-container {
-            width: 55vw;
-            max-width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            display: block;
-            outline: none;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #000;
-            display: block;
-            outline: none;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-        #contact {
-            background: #000;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        #contact .section-text {
-            max-width: 100%;
-            margin: 0 auto 20px;
-            text-align: center;
-            background: #000;
-        }
-
-        #contact a {
-            color: #0091c2;
-            font-weight: 600;
-        }
-
-        #contact a:hover {
-            color: #0091c2;
-        }
-
-        [id] {
-            scroll-margin-top: 60px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #ffffff;
-            color: #0091c2;
-            border-radius: 10px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #ddd;
-        }
-
-        footer {
-            background: #000;
-            color: #666;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        section:focus {
-            outline: none;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                max-width: 95vw;
-                padding: 10px;
-                text-align: left;
-            }
-
-
-            .hero-content img {
-                width: 90vw;
-            }
-
-            .video-container {
-                width: 95vw;
-            }
-
-            .inner-container {
-                max-width: 100vw;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-                box-sizing: border-box;
-            }
-        }
-
-        @media (min-width: 769px) {
-            section {
-                padding-left: 200px;
-                padding-right: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -334,13 +43,13 @@
         <button class="hamburger" aria-label="Toggle navigation">☰</button>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#current-projects">Current Projects</a>
-            <a href="#Mixes">Recent Mixes</a>
+            <a href="secretlakes.html">Secret Lake Stories</a>
             <a href="#Sound-Design-Work">Sound Design/<br>Composition Showreel</a>
             <a href="workshops.html">Workshops</a>
             <a href="#contact">Contact</a>
             <a href="blog.html">Blog</a>
             <a href="tuition.html">Tuition </a>
+            <a href="#Mixes">Recent Mixes</a>
         </div>
     </nav>
 
@@ -352,16 +61,20 @@
             <h1>Emily Zurowski <br>Manchester-based Sound Designer & Composer</h1>
             <p>
                 Emily is a Scottish composer, sound designer, and performer based in Manchester. She has worked as a
-                session musician with artists such as The Orielles (keys, synth, vocals), who she toured with nationally and
+                session musician with artists such as The Orielles (keys, synth, vocals), who she toured with nationally
+                and
                 internationally for a number of years, performing
                 at festivals like
                 <a href="https://www.youtube.com/watch?v=41b52MqgrY8" target="_blank" rel="noopener noreferrer">SXSW</a>
                 and
                 <a href="https://www.youtube.com/watch?v=Qv2wfoXc2TU&list=RDQv2wfoXc2TU&start_radio=1" target="_blank"
-                    rel="noopener noreferrer">Green Man Festival</a>. She has also toured across the UK with WH Lung and performed with them most recently at Green Man Festival in August 2025.
-                As a solo artist, Emily supported established US singer-songwriter <a href="https://theglasshouseicm.org/whats-on/julie-byrne/" target="_blank"
-                    rel="noopener noreferrer">Julie Byrne</a> at the Glasshouse in Gateshead. She also performs as part of experimental electronic duo Becoming Air, who debuted at NightGarden Festival in 2025.<br><br>
-                    In the last year, Emily has co-created several
+                    rel="noopener noreferrer">Green Man Festival</a>. She has also toured across the UK with WH Lung and
+                performed with them most recently at Green Man Festival in August 2025.
+                As a solo artist, Emily supported established US singer-songwriter <a
+                    href="https://theglasshouseicm.org/whats-on/julie-byrne/" target="_blank"
+                    rel="noopener noreferrer">Julie Byrne</a> at the Glasshouse in Gateshead. She also performs as part
+                of experimental electronic duo Becoming Air, who debuted at NightGarden Festival in 2025.<br><br>
+                In the last year, Emily has co-created several
                 immersive installations as part of a Manchester-based collective and composed original soundtracks for
                 two documentaries by award-winning documentary maker <a
                     href="https://www.salford.ac.uk/our-staff/maire-tracey" target="_blank"
@@ -378,45 +91,22 @@
                     rel="noopener noreferrer">Hypnagogia</a> on Reform Radio for a number of years and has produced
                 mixes for Voices Radio and NTS Radio.
                 Her current interests lie in community-focused
-                projects and using the arts as a vehicle for social change. Right now, she is creating a soundscape and podcast about developments on greenspace with residents of Levenshulme, Manchester. 
+                projects and using the arts as a vehicle for social change. Right now, she is creating a soundscape and
+                podcast about developments on greenspace with residents of Levenshulme, Manchester.
             </p>
 
             <p>Take a look at some examples of her <a href="#Sound-Design-Work">work</a> below and find her <a
                     href="#contact">contact details</a> and a full <a href="#contact">CV</a> at the bottom
                 of the page.</p><br><br>
-            <h2 id="current-projects" class="hero-content fade-in">Current Projects/Upcoming Events</h2>
-            <h2 id="current-projects" class="hero-content fade-in">Secret Lake Stories</h2>
-            <p>'Did you know there’s a hidden lake in Levenshulme? Tucked just off the Fallowfield Loop, the Secret
-                Lake
-                was once an industrial reservoir. Over the years, it’s been left to rewild and take on a life of its
-                own. Today, it’s a quiet, green space full of trees, water birds - a place that means a lot to many
-                local people.
-                Now, we want to gather the voices of the people who know it best. We’re working with sound artist Emily
-                Zurowski to create a new audio piece about the Secret Lake and we want to hear your memories,
-                reflections and stories about the lake.' [Levenshulme Old Library] <a
-                    href="https://levenshulmeoldlibrary.org.uk/secret-lake-stories">Read more
-                    here</a></p>
             
-            <h2 id="Mixes" class="hero-content fade-in">Recent Mixes</h2>
-            <p>
-                <iframe width="100%" height="120"
-                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FVoicesRadio%2Fa-midnight-detour-wmodema-250625-voices-radio%2F"
-                    frameborder="0"
-                    allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>
-                <iframe width="100%" height="120"
-                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Freformradio%2Fhypnagogia-5th-november-2024%2F"
-                    frameborder="0"
-                    allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>
-            </p>
-
-
             <section id="Sound-Design-Work" tabindex="-1">
                 <div class="inner-container fade-in">
                     <h3 class="fade-in">Sound Design/Composition Showreel</h3>
                     <p> Manchester-based since 2018, Emily has worked on a range of media, including community-focused
-                        documentaries and video-game sound
-                        re-design. She works from her home studio, using field recordings, audio programming, a range of
-                        software/hardware, and acoustic instruments. For a more genre-specific showreel, please email emily at the address below!</p>
+                        documentaries and video-game sound re-design. She works from her home studio, using field
+                        recordings, audio programming, a range of
+                        software/hardware, and acoustic instruments. For a more genre-specific showreel, please email
+                        Emily at the address below!</p>
                 </div>
                 <div class="video-container fade-in">
                     <div style="position:relative; padding-top:56.25%;">
@@ -428,6 +118,18 @@
                     </div>
                 </div>
             </section>
+
+            <h2 id="Mixes" class="hero-content fade-in">Recent Mixes</h2>
+            <p>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FVoicesRadio%2Fa-midnight-detour-wmodema-250625-voices-radio%2F"
+                    frameborder="0"
+                    allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Freformradio%2Fhypnagogia-5th-november-2024%2F"
+                    frameborder="0"
+                    allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"></iframe>
+            </p>
 
             <section id="contact" tabindex="-1">
                 <div class="section-text fade-in">

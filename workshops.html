@@ -35,306 +35,20 @@
     }
   </script>
 
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            scroll-behavior: smooth;
-            height: auto;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Roboto Mono', monospace;
-            background-color: #111;
-            color: #fff;
-            line-height: 1.6;
-            /* Remove the line below */
-            /* overflow: hidden; */
-        }
-
-        a {
-            color: #b4b3b3;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover,
-        a:focus {
-            color: #fff;
-            outline: none;
-        }
-
-        nav.nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .hamburger {
-            display: block;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            top: 70px;
-            right: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            gap: 15px;
-            z-index: 999;
-            width: max-content;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-links.open {
-            display: flex;
-        }
-
-        section {
-            min-height: 100vh;
-            padding: 80px 20px 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: justify;
-            background: #000;
-            overflow: hidden;
-            border-bottom: 1px solid #000;
-            border-top: 1px solid #000;
-        }
-
-        a:focus:not(:focus-visible) {
-            outline: none;
-        }
-
-        .inner-container {
-            width: 65vw;
-            max-width: 65;
-            padding: 20px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-            background: #000;
-        }
-
-        .hero {
-            position: relative;
-            background-color: #000;
-        }
-
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 65vw;
-            padding: 20px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: justify;
-            background: #000;
-        }
-
-        .hero-content h1 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-        }
-
-        .hero-content img {
-            max-width: 40vw;
-            display: block;
-            margin: 0 auto;
-            height: auto;
-            border: none;
-            padding: 4px;
-        }
-
-        .hero-content p {
-            font-weight: 300;
-            font-size: 1rem;
-            margin: 0 0 1rem;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-        }
-
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-            width: 65vw;
-
-        }
-
-        .video-container {
-            width: 55vw;
-            max-width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            display: block;
-            outline: none;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #000;
-            display: block;
-            outline: none;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-        #contact {
-            background: #000;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        #contact .section-text {
-            max-width: 100%;
-            margin: 0 auto 20px;
-            text-align: center;
-            background: #000;
-        }
-
-        #contact a {
-            color: #0091c2;
-            font-weight: 600;
-        }
-
-        #contact a:hover {
-            color: #0091c2;
-        }
-
-        [id] {
-            scroll-margin-top: 60px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #ffffff;
-            color: #0091c2;
-            border-radius: 10px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #ddd;
-        }
-
-        footer {
-            background: #000;
-            color: #666;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        section:focus {
-            outline: none;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                max-width: 95vw;
-                padding: 10px;
-                text-align: left;
-            }
-
-
-            .hero-content img {
-                width: 90vw;
-            }
-
-            .video-container {
-                width: 95vw;
-            }
-
-            .inner-container {
-                max-width: 100vw;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-                box-sizing: border-box;
-            }
-        }
-
-        @media (min-width: 769px) {
-            section {
-                padding-left: 200px;
-                padding-right: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <nav class="nav" aria-label="Primary navigation">
         <button class="hamburger" aria-label="Toggle navigation">☰</button>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#secret-lake-stories">Secret Lake Stories</a>
+            <a href="index.html#Mixes">Recent Mixes</a>
+            <a href="index.html#Sound-Design-Work">Sound Design/<br>Composition Showreel</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#blog"
+            <a href="index.html#tuition">Tuition</a>
 
         </div>
     </nav>
@@ -344,66 +58,68 @@
         <div class="hero-content fade-in">
             <h1>Workshops</h1>
             <p></p>
-               
+
 
             <h2 id="Workshops" class="hero-content fade-in">Contact Mic Workshop: Making Contact</th2>
 
-            <p><a href="https://www.pink-mcr.com/">PINK mcr</a> 10 August 2025 [past]<br><br>
-                <a href="https://www.xmtr.fm/festival">XMTR festival</a> 26th-28th September 2025 [upcoming]<br><br>
-                A workshop, led by Manchester-based sound designer and composer Emily Zurowski, where
-                participants are introduced to the world of contact microphones and given the opportunity to make their
-                own experimental sounds and soundscapes. See below for a video of a recent workshop held at <a href="https://www.pink-mcr.com/">PINK mcr</a>
-            </p>
+                <p><a href="https://www.pink-mcr.com/">PINK mcr</a> 10 August 2025 [past]<br><br>
+                    <a href="https://www.xmtr.fm/festival">XMTR festival</a> 26th-28th September 2025 [upcoming]<br><br>
+                    A workshop, led by Manchester-based sound designer and composer Emily Zurowski, where
+                    participants are introduced to the world of contact microphones and given the opportunity to make
+                    their
+                    own experimental sounds and soundscapes. See below for a video of a recent workshop held at <a
+                        href="https://www.pink-mcr.com/">PINK mcr</a>
+                </p>
 
-             <div class="video-container fade-in">
+                <div class="video-container fade-in">
                     <div style="position:relative; padding-top:56.25%;">
-                        <iframe loading="lazy"
-                            src="https://player.vimeo.com/video/1113519490?h=17040398e8"
+                        <iframe loading="lazy" src="https://player.vimeo.com/video/1113519490?h=17040398e8"
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                             title="Showreel July 2025"
                             style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                     </div>
                 </div>
 
-            <b>Testimonials:</b>
-            <p>'Hands-on experience. I got to experiment with the different mics instead of simply learning from a
-                distance.'<br><br>
-                'I enjoyed hearing about the theory of soundscapes, creating the soundscapes at the end through ableton
-                and getting to hear how the plugins really brought the sounds to life'<br><br>
-                'Informative and playful'</p>
+                <b>Testimonials:</b>
+                <p>'Hands-on experience. I got to experiment with the different mics instead of simply learning from a
+                    distance.'<br><br>
+                    'I enjoyed hearing about the theory of soundscapes, creating the soundscapes at the end through
+                    ableton
+                    and getting to hear how the plugins really brought the sounds to life'<br><br>
+                    'Informative and playful'</p>
 
                 <footer>&copy; 2025 Emily Zurowski. All Rights Reserved.</footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinkItems = document.querySelectorAll('.nav-links a');
+                <script>
+                    const hamburger = document.querySelector('.hamburger');
+                    const navLinks = document.querySelector('.nav-links');
+                    const navLinkItems = document.querySelectorAll('.nav-links a');
 
-        hamburger.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('open');
-            hamburger.classList.toggle('active');
-            hamburger.setAttribute('aria-expanded', isOpen);
-        });
+                    hamburger.addEventListener('click', () => {
+                        const isOpen = navLinks.classList.toggle('open');
+                        hamburger.classList.toggle('active');
+                        hamburger.setAttribute('aria-expanded', isOpen);
+                    });
 
-        navLinkItems.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                hamburger.classList.remove('active');
-            });
-        });
+                    navLinkItems.forEach(link => {
+                        link.addEventListener('click', () => {
+                            navLinks.classList.remove('open');
+                            hamburger.classList.remove('active');
+                        });
+                    });
 
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
+                    const faders = document.querySelectorAll('.fade-in');
+                    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.3 });
 
-        faders.forEach(fader => appearOnScroll.observe(fader));
-    </script>
+                    faders.forEach(fader => appearOnScroll.observe(fader));
+                </script>
 </body>
 <!-- Trigger rebuild -->
 
