@@ -87,6 +87,12 @@
     <a href="#Mixes">Recent mixes</a>
     <a href="tuition.html">Tuition</a>
     <a href="secretlakes.html">Secret Lake Stories</a>
+
+    <div class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
   </div>
 
     <section id="workshops" class="hero" tabindex="-1">
@@ -128,33 +134,15 @@
 
                 <script>
                     const hamburger = document.querySelector('.hamburger');
-                    const navLinks = document.querySelector('.nav-links');
-                    const navLinkItems = document.querySelectorAll('.nav-links a');
+                    const header = document.querySelector('.header');
 
                     hamburger.addEventListener('click', () => {
-                        const isOpen = navLinks.classList.toggle('open');
+                        header.classList.toggle('menu-open');
                         hamburger.classList.toggle('active');
+
+                        const isOpen = hamburger.classList.contains('active');
                         hamburger.setAttribute('aria-expanded', isOpen);
                     });
-
-                    navLinkItems.forEach(link => {
-                        link.addEventListener('click', () => {
-                            navLinks.classList.remove('open');
-                            hamburger.classList.remove('active');
-                        });
-                    });
-
-                    const faders = document.querySelectorAll('.fade-in');
-                    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.3 });
-
-                    faders.forEach(fader => appearOnScroll.observe(fader));
                 </script>
 </body>
 <!-- Trigger rebuild -->
