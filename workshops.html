@@ -39,18 +39,55 @@
 </head>
 
 <body>
-    <nav class="nav" aria-label="Primary navigation">
-        <button class="hamburger" aria-label="Toggle navigation">☰</button>
-        <div class="nav-links">
-        <a href="#home">Home</a>
+
+    
+      <title>Sticky Black Header</title>
+  <style>
+    /* Header styling */
+    .header {
+      position: fixed;       /* Stays at the top when scrolling */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+      z-index: 1000;         /* Keeps it above other content */
+    }
+
+    /* Links inside header */
+    .header a {
+      color: white;
+      text-decoration: none;
+      margin: 15px 30px;
+      font-size: 16px;
+      transition: all 0.2s ease;  
+    }
+
+    .header a:hover {
+      color: #cd0089;
+      transform: scale(1.1);
+    }
+
+    /* Add spacing so content isn't hidden behind fixed header */
+    .content {
+      padding-top: 80px; /* Adjust to match header height */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with links -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="#Sound-Design-Work">Showreel</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="#Mixes">Recent mixes</a>
+    <a href="tuition.html">Tuition</a>
     <a href="secretlakes.html">Secret Lake Stories</a>
-    <a href="#Sound-Design-Work">Sound Design/<br>Composition Showreel</a>
-    <a href="#contact">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="tuition.html">Tuition </a>
-    <a href="#Mixes">Recent Mixes</a>
-        </div>
-    </nav>
+  </div>
 
     <section id="workshops" class="hero" tabindex="-1">
         <div class="overlay"></div>
