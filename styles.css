@@ -340,27 +340,48 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content {
-                max-width: 95vw;
-                padding: 10px;
-                text-align: left;
-            }
-
-
             .hero-content img {
                 width: 90vw;
+                /* fills most of the screen */
+                max-width: none;
+                /* remove max-width: 40vw restriction */
+                height: auto;
+                /* maintain aspect ratio */
             }
+        }
 
+
+        @media (max-width: 768px) {
+
+            .inner-container,
+            .hero-content {
+                max-width: 95vw;
+                padding: 0 10px;
+            }
+        }
+
+        .video-container {
+            width: 95vw;
+        }
+
+        @media (max-width: 768px) {
             .video-container {
                 width: 95vw;
+                /* fills most of the screen */
+                max-width: 100%;
+                /* ensures it never overflows */
+                aspect-ratio: 16 / 9;
+                /* preserves 16:9 ratio */
             }
+        }
 
-            .inner-container {
-                max-width: 100vw;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-                box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            .icon-row a img {
+                width: 15vw;
+                /* scales relative to screen width */
+                height: auto;
+                /* maintain aspect ratio */
             }
         }
 
