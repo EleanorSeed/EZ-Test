@@ -258,12 +258,18 @@
         }
 
         .logo-special {
-  width: auto;          /* Let width be natural */
-  height: auto;         /* Let height be natural */
-  max-width: 100%;      /* Scale down if container is smaller */
-  display: block;       /* Avoid inline spacing issues */
-  object-fit: contain;  /* Ensures it won’t stretch inside a fixed container */
-}
+            width: auto;
+            /* Let width be natural */
+            height: auto;
+            /* Let height be natural */
+            max-width: 100%;
+            /* Scale down if container is smaller */
+            display: block;
+            /* Avoid inline spacing issues */
+            object-fit: contain;
+            /* Ensures it won’t stretch inside a fixed container */
+            background: transparent
+        }
 
         #contact {
             background: #000;
