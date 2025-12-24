@@ -257,6 +257,14 @@
             opacity: 0.8;
         }
 
+        .logo-special {
+  width: auto;          /* Let width be natural */
+  height: auto;         /* Let height be natural */
+  max-width: 100%;      /* Scale down if container is smaller */
+  display: block;       /* Avoid inline spacing issues */
+  object-fit: contain;  /* Ensures it won’t stretch inside a fixed container */
+}
+
         #contact {
             background: #000;
             margin-top: 0;
