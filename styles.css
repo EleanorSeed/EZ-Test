@@ -51,7 +51,7 @@ a:focus:not(:focus-visible) {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: #F5F5F5;
     transition: 0.3s;
 }
 
@@ -59,7 +59,7 @@ a:focus:not(:focus-visible) {
     transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger.active span:nth-child(2) {5F5F5
+.hamburger.active span:nth-child(2) {F5F5F5
     opacity: 0;
 }
 
@@ -240,7 +240,7 @@ iframe {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background: #F5F5F5F5F5F5;
+    background: #F5F5F5;
     color: #0091c2;
     border-radius: 10px;
     font-weight: 700;
