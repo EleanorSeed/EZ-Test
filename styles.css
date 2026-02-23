@@ -16,8 +16,8 @@ body {
 body {
     margin: 0;
     font-family: 'Roboto Mono', monospace;
-    background-color: #111;
-    color: #fff;
+    background-color: #000;
+    color: #F5F5F5;
     line-height: 1.6;
 }
 
@@ -29,7 +29,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #fff;
+    color: #F5F5F5;
     outline: none;
 }
 
@@ -37,15 +37,9 @@ a:focus:not(:focus-visible) {
     outline: none;
 }
 
-/* ===================== Navigation ===================== */
-nav.nav {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
 
-/* Hamburger icon (hidden on desktop) */
+/* ===================== Navigation ===================== */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -61,65 +55,82 @@ nav.nav {
     transition: 0.3s;
 }
 
-/* Hamburger transforms into X when active */
 .hamburger.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
-.hamburger.active span:nth-child(2) {
+
+.hamburger.active span:nth-child(2) {5F5F5
     opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-.nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    gap: 15px;
-    z-index: 999;
-    width: max-content;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
-.nav-links.open {
-    display: flex;
-}
+/* ===================== Sections Base Layout ===================== */
 
-/* ===================== Sections & Containers ===================== */
 section {
-    min-height: 100vh;
     padding: 80px 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    background: #000;
     overflow: hidden;
 }
+}
+
+
+/* ===================== Section Variations ===================== */
+
+/* Dark Section */
+.section-dark {
+    background-color: #000;
+    color: #F5F5F5;
+}
+
+/* Light Section (refined cream) */
+.section-light {
+    background-color: #F5F5F5;
+    color: #000;
+}
+
+
+/* Link Styling Per Section */
+
+.section-dark a {
+    color: #b4b3b3;
+}
+
+.section-dark a:hover {
+    color: #F5F5F5;
+}
+
+.section-light a {
+    color: #cd0089;
+    font-weight: 600;
+}
+
+.section-light a:hover {
+    color: #000;
+}
+
+
+/* ===================== Containers ===================== */
 
 .inner-container {
     position: relative;
     z-index: 1;
     max-width: 65vw;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     text-align: justify;
-    background: #000;
 }
 
 .hero {
     position: relative;
-    background-color: #000;
 }
 
 .hero .overlay {
@@ -136,14 +147,11 @@ section {
     position: relative;
     z-index: 1;
     max-width: 65vw;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: justify;
-    background: #000;
 }
 
 .hero-content h1 {
@@ -168,7 +176,8 @@ section {
     margin: 0 0 1rem;
 }
 
-h2 {
+h2,
+h3 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
@@ -176,20 +185,17 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin: 0;
     width: 65vw;
 }
+
+
+/* ===================== Video ===================== */
 
 .video-container {
     width: 55vw;
     max-width: 100%;
     aspect-ratio: 16/9;
-    background: #000;
     margin-bottom: 0;
-    padding-bottom: 0;
     display: block;
     outline: none;
     backface-visibility: hidden;
@@ -200,12 +206,14 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-    background: #000;
     display: block;
     outline: none;
     backface-visibility: hidden;
     transform: translateZ(0);
 }
+
+
+/* ===================== Icons ===================== */
 
 .icon-row {
     display: flex;
@@ -225,45 +233,14 @@ iframe {
     opacity: 0.8;
 }
 
-.logo-special {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    display: block;
-    object-fit: contain;
-    background: transparent;
-}
 
-#contact {
-    background: #000;
-    margin: 0;
-}
-
-#contact .section-text {
-    max-width: 100%;
-    margin: 0 auto 20px;
-    text-align: center;
-    background: #000;
-}
-
-#contact a {
-    color: #cd0089;
-    font-weight: 600;
-}
-
-#contact a:hover {
-    color: #cd0089;
-}
-
-[id] {
-    scroll-margin-top: 60px;
-}
+/* ===================== Buttons ===================== */
 
 .download-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background: #ffffff;
+    background: #F5F5F5F5F5F5;
     color: #0091c2;
     border-radius: 10px;
     font-weight: 700;
@@ -273,8 +250,11 @@ iframe {
 
 .download-btn:hover {
     background-color: #ddd;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
+
+/* ===================== Footer ===================== */
 
 footer {
     background: #000;
@@ -283,6 +263,9 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
 }
+
+
+/* ===================== Animation ===================== */
 
 .fade-in {
     opacity: 0;
@@ -301,7 +284,9 @@ section:focus {
     }
 }
 
+
 /* ===================== Desktop Layout ===================== */
+
 @media (min-width: 769px) {
     section {
         padding-left: 200px;
@@ -309,10 +294,11 @@ section:focus {
     }
 }
 
-/* ===================== Mobile Layout (max-width: 768px) ===================== */
+
+/* ===================== Mobile Layout ===================== */
+
 @media (max-width: 768px) {
 
-    /* Hamburger and header */
     .hamburger {
         display: flex;
     }
@@ -334,7 +320,6 @@ section:focus {
         padding-bottom: 20px;
     }
 
-    /* Hero content */
     .hero-content img {
         width: 90vw;
         max-width: none;
@@ -348,14 +333,12 @@ section:focus {
         text-align: center;
     }
 
-    /* Video */
     .video-container {
         width: 95vw;
         max-width: 100%;
         aspect-ratio: 16/9;
     }
 
-    /* Icon row */
     .icon-row a img {
         width: 15vw;
         height: auto;
