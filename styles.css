@@ -176,6 +176,15 @@ section {
     margin: 0 0 1rem;
 }
 
+.spotify-embed {
+  width: 300px;
+  margin: px auto !important;   /* smaller number */
+}
+
+.spotify-embed iframe {
+  display: block;
+}
+
 h2,
 h3 {
     font-size: 20px;
