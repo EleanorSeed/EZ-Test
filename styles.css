@@ -22,7 +22,7 @@ body {
 }
 
 a {
-    color: #b4b3b3;
+    color: #cd0089;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -78,7 +78,7 @@ section {
     text-align: justify;
     overflow: hidden;
 }
-}
+
 
 
 /* ===================== Section Variations ===================== */
@@ -99,11 +99,11 @@ section {
 /* Link Styling Per Section */
 
 .section-dark a {
-    color: #b4b3b3;
+    color: #cd0089;
 }
 
 .section-dark a:hover {
-    color: #F5F5F5;
+    color: #cd0089;
 }
 
 .section-light a {
@@ -112,7 +112,7 @@ section {
 }
 
 .section-light a:hover {
-    color: #000;
+    color: #cd0089;
 }
 
 
